@@ -7,6 +7,8 @@ tags: []
 ---
 {% include JB/setup %}
 
+**Update**: *MariaDB is now on [github](https://github.com/MariaDB/server). I have created my own [fork](https://github.com/igniting/server), and pushed my changes on to the [selfTuningOptimizer](https://github.com/igniting/server/tree/selfTuningOptimizer) branch.*
+
 In the [previous blog post]({% post_url 2014-05-11-first-steps %}), I had stated that I will start coding the things discussed in it. I have set up a [branch](https://code.launchpad.net/~igniting/maria/maria) on launchpad and have pushed a [commit](http://bazaar.launchpad.net/~igniting/maria/maria/revision/4211) which I will be discussing in this post.
 
 I first needed to make a table in the mysql database, from where we would be reading constants and later updating them too. The sql commands for creating a table in the mysql database are written in the file `scripts/mysql_system_tables.sql`. I have added a table named `all_constants` which currently has only two columns `const_name` and `const_value`.

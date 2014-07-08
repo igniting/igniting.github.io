@@ -22,7 +22,7 @@ S = ols(Y, X);
 dlmwrite('solutions.txt', S);
 {% endhighlight %}
 
-The results are not promising. I get negative values for some of the coefficients. This may be because of the outliers in my sample data, introduced because of a bug in my code. I will fix it soon and then try again. I will also try out other methods, some of which will be specific to the case of sparse matrix input.
+The results are not promising. I get negative values for some of the coefficients. This may be because of the outliers in my sample data, introduced because of a bug in my code. I will fix it soon and then try again. I will also try out other methods, some of which will be specific to the case of sparse matrix input. You can download the dataset from [here](https://drive.google.com/file/d/0B7NiQb4EbbUVNVJFZ2xkRVR3Ylk/edit?usp=sharing).
 
 As usual, you can find the code at my [repo](https://github.com/igniting/server/tree/selfTuningOptimizer). Comments and suggestions are welcome.
 

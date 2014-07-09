@@ -16,7 +16,7 @@ Note we have 130 constants, `(2 + 2*64)`, where 64 is maximum allowed engines. N
 I have started with the least squares method to solve these equations. Here is a simple octave script that does that for me,
 {% highlight octave %}
 A = dlmread('coefficients.txt', ' ');
-X = A(:, end-1);
+X = A(:, [1:end-1]);
 Y = A(:, end);
 S = ols(Y, X);
 dlmwrite('solutions.txt', S);

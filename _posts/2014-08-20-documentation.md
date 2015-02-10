@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Documentation"
-description: ""
+description: "Documentation for self tuning optimizer, MariaDB"
 category: gsoc2014 
 tags: []
 ---

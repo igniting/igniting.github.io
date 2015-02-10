@@ -3,7 +3,7 @@
 permalink: /:categories/:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-pygments: true
+highlighter: pygments
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
@@ -14,6 +14,11 @@ author :
   email : anshu.avinash35@gmail.com
   github : igniting
   facebook : anshuavi
+  linkedin: igniting
+  email_md5: 910a91ec4709ae36a5d0bb114cb6d2bd
+
+paginate: 10
+paginate_path: "page:num"
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 

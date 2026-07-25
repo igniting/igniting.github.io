@@ -1,76 +1,139 @@
----
-layout: default
-title: igniting's blog
-tagline:
----
-{% include JB/setup %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anshu Avinash</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Anshu Avinash</h1>
+    <nav><a href="https://github.com/igniting">GitHub</a></nav>
+  </header>
 
-{% for post in paginator.posts %}
-{% if post.hidden != true %}
-<article class="home" style="margin-top:40px">
+  <section>
+    <h2>Recent Work</h2>
 
-  <span class="post-date">
-    {% assign d = post.date | date: "%d" | plus:'0' %}
-    {{ post.date | date: "%B" }}
-    {% case d %}
-    {% when 1 or 21 or 31 %}{{ d }}st,
-    {% when 2 or 22 %}{{ d }}nd,
-    {% when 3 or 23 %}{{ d }}rd,
-    {% else %}{{ d }}th,
-    {% endcase %}
-    {{ post.date | date: "%Y" }}
-  </span>
+    <div class="project">
+      <div class="project-header">
+        <a class="project-title" href="https://igniting.github.io/arithmetic-of-intelligence/">The Arithmetic of Intelligence</a>
+        <span class="project-date">Jul 2026</span>
+      </div>
+      <p class="project-desc">A problem course in modern machine learning</p>
+    </div>
 
-  <h3>
-    <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-  </h3>
+    <div class="project">
+      <div class="project-header">
+        <a class="project-title" href="https://igniting.github.io/loops-write-skills/">The Loop Writes the Skill</a>
+        <span class="project-date">Jul 2026</span>
+      </div>
+      <p class="project-desc">Blog post with interactive demo</p>
+    </div>
 
-  <div>
+    <div class="project">
+      <div class="project-header">
+        <a class="project-title" href="https://igniting.github.io/harness-tax/">Harness Tax</a>
+        <span class="project-date">Jul 2026</span>
+      </div>
+      <p class="project-desc">Measuring what agentic harnesses add (and cost)</p>
+    </div>
 
-    {% if post.fullview %}
-    {{ post.content }}
-    {% else %}
+    <div class="project">
+      <div class="project-header">
+        <a class="project-title" href="https://igniting.github.io/benchmark-autopsy/">Benchmark Autopsy</a>
+        <span class="project-date">Jun 2026</span>
+      </div>
+      <p class="project-desc">Dissecting AI benchmarks</p>
+    </div>
 
-    <a href="{{ BASE_PATH }}{{post.url }}">
-      {% if post.shortinfo %}{{ post.shortinfo }}{% elsif post.description %}{{ post.description }}{% else %}{{ post.excerpt }}{% endif %}
-    </a>
+    <div class="project">
+      <div class="project-header">
+        <a class="project-title" href="https://igniting.github.io/underneath-the-feature/">Underneath the Feature</a>
+        <span class="project-date">May 2026</span>
+      </div>
+      <p class="project-desc">On single-threaded ownership</p>
+    </div>
 
-    {% endif %}
-  </div>
+    <div class="project">
+      <div class="project-header">
+        <a class="project-title" href="https://igniting.github.io/deepseek-story/">DeepSeek V4: A View from the Twelfth Floor</a>
+        <span class="project-date">Apr 2026</span>
+      </div>
+      <p class="project-desc">A story about DeepSeek</p>
+    </div>
 
-</article>
-{% endif %}
-{% endfor %}
-<hr/>
+    <div class="project">
+      <div class="project-header">
+        <a class="project-title" href="https://igniting.github.io/the-carrier-wave/">The Carrier Wave</a>
+        <span class="project-date">Apr 2026</span>
+      </div>
+      <p class="project-desc">An essay</p>
+    </div>
 
-<ul class="pager">
+    <div class="project">
+      <div class="project-header">
+        <a class="project-title" href="https://igniting.github.io/turboquant/">TurboQuant</a>
+        <span class="project-date">Apr 2026</span>
+      </div>
+      <p class="project-desc">Interactive presentation on online vector quantization</p>
+    </div>
 
-  {% if paginator.previous_page %}
-  <li class="previous">
-    {% if paginator.previous_page == 1 %}
-    <a href="{{ BASE_PATH }}/">&larr; Newer</a>
-    {% else %}
-    <a href="{{ BASE_PATH }}/{{ site.paginate_path | replace: ':num', paginator.previous_page }}">&larr; Newer</a>
-    {% endif %}
-  </li>
-  {% else %}
-  <li class="previous disabled">
-    <a>&larr; Newer</a>
-  </li>
-  {% endif %}
+    <div class="project">
+      <div class="project-header">
+        <a class="project-title" href="https://igniting.github.io/the-writing-wall/">The Writing Wall</a>
+        <span class="project-date">Apr 2026</span>
+      </div>
+      <p class="project-desc">An essay</p>
+    </div>
 
-  <li>
-    <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-  </li>
+    <div class="project">
+      <div class="project-header">
+        <a class="project-title" href="https://igniting.github.io/the-invisible-stack/">The Invisible Stack</a>
+        <span class="project-date">Apr 2026</span>
+      </div>
+      <p class="project-desc">On the unseen layers of software</p>
+    </div>
 
-  {% if paginator.next_page %}
-  <li class="next">
-    <a href="{{ BASE_PATH }}/{{ site.paginate_path|replace: ':num',paginator.next_page }}">Older &rarr;</a>
-  </li>
-  {% else %}
-  <li class="next disabled">
-    <a>Older &rarr;</a>
-  </li>
-  {% endif %}
-  
-</ul>
+    <div class="project">
+      <div class="project-header">
+        <a class="project-title" href="https://igniting.github.io/claude-code-autobiography/">I Built the Lock. They Shipped the Key.</a>
+        <span class="project-date">Apr 2026</span>
+      </div>
+      <p class="project-desc">From the autobiography of Claude Code</p>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <a class="project-title" href="https://igniting.github.io/six-months/">Six Months</a>
+        <span class="project-date">Mar 2026</span>
+      </div>
+      <p class="project-desc">A CTO's reckoning with the AI inflection point</p>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <a class="project-title" href="https://igniting.github.io/sandboxed-agents/">Sandboxed Agents</a>
+        <span class="project-date">Mar 2026</span>
+      </div>
+      <p class="project-desc">How the industry runs untrusted AI code safely</p>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <a class="project-title" href="https://igniting.github.io/context-attribution/">Context Attribution</a>
+        <span class="project-date">Dec 2025</span>
+      </div>
+      <p class="project-desc">Tracing what an LLM says back to why it said it</p>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <a class="project-title" href="https://igniting.github.io/context-engineering/">Context Engineering</a>
+        <span class="project-date">Dec 2025</span>
+      </div>
+      <p class="project-desc">Interactive presentation on context engineering</p>
+    </div>
+  </section>
+</body>
+</html>
